@@ -4,22 +4,101 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-        <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <title>Tendawifiproviders</title>
+    <style>
+        body {
+            display: grid;
+            place-items: center;
+            font-family: 'montserrat', sans-serif;
+            height: 100vh;
+            margin: 0;
+            background-color: #fff; /* White background color */
+            color: #FFA500; /* Orange text color */
+        }
+
+        #container {
+            text-align: center;
+            transition: all 0.6s ease-in-out;
+        }
+
+        .container {
+            background-color: orange; /* Lighter orange container background color */
+            border-radius: 2em;
+            box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+            position: relative;
+            overflow: hidden;
+            width: 80%; /* Adjusted for responsiveness */
+            max-width: 650px;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+       h1 {
+    font-weight: bold;
+    margin: 5px 0;
+    font-size: 1.5em;
+    color: white; /* Change to a contrasting color */
+}
+
+        /* Style for input and anchor */
+        input {
+            margin: 10px 0;
+            padding: 10px;
+            width: 80%; /* Adjusted for responsiveness */
+            box-sizing: border-box; /* Include padding and border in width calculation */
+        }
+
+        img {
+            width: 280px; /* Adjust the width of the logo */
+            height: 120px; /* Adjust the height of the logo */
+            margin-bottom: 20px; /* Adjust the margin to provide space between the logo and input fields */
+        }
+
+        a {
+            display: block;
+            text-align: center;
+            margin-top: 20px;
+            text-decoration: none;
+            color: white;
+        }
+          .input-icon {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            left: 15px;
+            color: #555; /* Adjust icon color */
+        }
+         input {
+            margin: 10px 0;
+            padding: 10px;
+            width: 70%; /* Adjusted for responsiveness */
+            box-sizing: border-box; /* Include padding and border in width calculation */
+        }
+    </style>
 </head>
 <body>
-    
-<h1>Sign Up</h1>
-
-    <form action="/signup" method="post" >
-        <input placeholder="Name" name="name" type="text">
+<div class="container" id="container">
+    <img src="https://i.ibb.co/SdQ8P6q/Wifi-provider.png" alt="Wifi-provider">
+    <h1>Create Account</h1>
+   <form action="/signup" method="post">
+        <!-- Add Font Awesome icons to input fields -->
+        <div style="position: relative;">
+            <i class="fas fa-user input-icon"></i>
+            <input placeholder="Name" name="name" type="text">
+        </div>
         <br>
-        <input placeholder="Password" name="password" type="password">
+        <div style="position: relative;">
+            <i class="fas fa-lock input-icon"></i>
+            <input placeholder="Password" name="password" type="password">
+        </div>
         <br>
-        <input class="sub" type="submit">
+        <input class="sub" type="submit" value="Register">
     </form>
-
-       <a href="/">Go back to login page</a>
+    <a href="\">Go back to login page</a>
+</div>
 
 </body>
 </html>

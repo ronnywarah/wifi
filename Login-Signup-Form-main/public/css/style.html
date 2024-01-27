@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/c55a744d54.js" crossorigin="anonymous"></script>
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        body{
+            background-color: rgba(0, 0, 0, 0.781);
+            color: white;
+        }
+        .container{
+            width: 100%;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+        .topbar{
+            display: flex;
+            justify-content: space-between;
+            color: white;
+        }
+        .right, .left {
+            padding: 2px;
+            border-radius: 5px;
+            text-align: center;
+        }
+        .background{
+            height: 100vh;
+            width: 100vw;
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+        .background img{
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }
+        
+        .div1, .div2, .div3{
+            height: 120px;
+            width: 90%;
+            border-radius: 10px;
+            border: 1px solid rgb(226, 156, 63);
+            margin: 15px;
+            background-color: rgba(0, 0, 0, 0.37);
+            padding: 15px;
+        }
+        .div1{
+            display: flex;
+            justify-content: space-between;
+        }
+    
+        .div2{
+            border: 1px solid rgb(18, 136, 18);
+
+        }
+        .div3{
+            border: 1px solid rgb(81, 150, 230);
+            text-align: center;
+        }
+        h2{
+            text-align: center;
+        }
+        .net{
+            display: flex;
+            justify-content: space-around;
+        }
+        .net1{
+            border-right: 1px solid white;
+        }
+        .net span, .dbm{
+            font-size: 1.5em;
+            margin-right: 1.5em;
+            color: orange;
+        }
+        .line{
+            height: 60px;
+            border-right: 2px solid white;
+        }
+        .span  {
+            margin-bottom: -10px;
+        }
+        .button{
+            width: 100px;
+            height: 20px;
+            background-color: orange;
+            border: 1px solid white;
+            border-radius: 50px 0 50px 0;
+            text-align: center ;
+        }
+        .button:hover{
+            background-color: white;
+            color: orange;
+            cursor: pointer;
+        }
+
+    </style>
+    <div class="container">
+        <div class="background">
+            <img src="https://www.acldigital.com/sites/default/files/2020-07/Blog_Banner_1366X560_HARNESSING%20THE%20POWER%20OF%205G.jpg" alt="">
+        </div>
+        <div class="box">
+            <div class="topbar">
+                <div style="text-align: center;">Connected Devices: <br>
+                1 Phone</div>
+                <div class="right">Network Device Name: <br> <Span>Huawei</Span></div>
+                <div class="left"><span>Ronald Omondi</span></div>
+            </div>
+            <div class="div1">
+                <div>
+                    <p><i class="fa-solid fa-wallet" style="color: #B197FC;"></i> Curent Balance: 250</p>
+                    <p><i class="fa-solid fa-coins" style="color: #B197FC;"></i> Amount Due: 0</p>
+                </div>
+                <div>
+                    <p><i class="fa-solid fa-check fa-lg " style="color: #2fb90c;" ></i> Payment Status: Paid</p>
+                </div>
+                
+    
+            </div>
+            <div class="div2">
+                <p>Current Package</p>
+                <div class="net">
+                    <div>
+                        <p class="span"><span>67</span>mbps</p>
+                        <p>Network Speed</p>
+                    </div>
+                    <div class="line"></div>
+                    <div>
+                        <p class="span"><span>5</span>Days</p>
+                        <p>Until 3/1/2024</p>
+                    </div>
+                </div>
+            </div>
+            <div class="div3">
+                <div>
+                    <p><i class="fa-solid fa-signal" style="color: #dcedf9;"></i> Signal Strength </p>
+                    <p class="dbm">5 dbm</p>
+                </div>
+            </div>
+            <div class="net">
+                <p><i class="fa-brands fa-whatsapp" style="color: #B197FC;"></i> </i>Chat with us on WhatsApp</p>
+                <p class="button">Log out</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

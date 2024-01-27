@@ -3,24 +3,258 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+        <script src="https://kit.fontawesome.com/c55a744d54.js" crossorigin="anonymous"></script>
+
     <link rel="stylesheet" href="css/login.css">
+    <title>Home</title>
 </head>
 <body>
+     <style>
+        body{
+            background-color: rgba(0, 0, 0, 0.781);
+            color: white;
+        }
+        .container{
+            width: 100%;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+        .topbar{
+            display: flex;
+            justify-content: space-between;
+            color: white;
+        }
+        .right, .left {
+            padding: 2px;
+            border-radius: 5px;
+            text-align: center;
+        }
+        .background{
+            height: 100vh;
+            width: 100vw;
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+        .background img{
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }
+        
+        .div1, .div2, .div3{
+            height: 120px;
+            width: 90%;
+            border-radius: 10px;
+            border: 1px solid rgb(226, 156, 63);
+            margin: 15px;
+            background-color: rgba(0, 0, 0, 0.37);
+            padding: 15px;
+        }
+        .div1{
+            display: flex;
+            justify-content: space-between;
+        }
+    
+.div2 {
+    text-align: center;
+    border: 1px solid rgb(18, 136, 18);
+    padding: 15px;
+}
 
-    <h1>Welcome, {{ naming }}!</h1>
-    <h1>Data from MongoDB</h1>
-  <ul>
-    {{#each data}}
-      <li>connectionStatus {{connectionStatus}}</li>
-      <li>{{this.signalStrength}}</li>
-      <li>{{this.networkSpeed }}</li>
-      <li>{{this.connectedDevices }}</li>
-      <li>{{this.paymentStatus }}</li>
+        .div3{
+            border: 1px solid rgb(81, 150, 230);
+            text-align: center;
+        }
+        h2{
+            text-align: center;
+        }
+      .net {
+    display: flex;
+    justify-content: space-between; /* Separate links to different corners */
+    align-items: center;
+}
+        .net1{
+            border-right: 1px solid white;
+        }
+        span{
+            {{!-- font-size: 1.5em; --}}
+            margin-right: 1.5em;
+            color: orange;
+        }
+        .net span, .dbm{
+            font-size: 1.5em;
+            margin-right: 1.5em;
+            color: orange;
+        }
+       .line {
+    height: 60px;
+    border-right: 2px solid white;
+    margin: 0 15px;
+}
+        .span  {
+            margin-bottom: -10px;
+        }
+        .button{
+            width: 100px;
+            height: 20px;
+            background-color: orange;
+            border: 1px solid white;
+            border-radius: 50px 0 50px 0;
+            text-align: center ;
+        }
+        .button:hover{
+            background-color: white;
+            color: orange;
+            cursor: pointer;
+        }
+        a {
+    text-decoration: none;
+    color: white;
+}
 
-    {{/each}}
-  </ul>
+a:hover {
+    text-decoration: underline;
+    color: yellow; /* Change the color when hovering */
+}
+.net a {
+    padding: 10px;
+    background-color: orange;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
 
+.net a:hover {
+    background-color: white;
+    color: orange;
+}
+.button {
+    width: 100px;
+    height: 20px;
+    background-color: orange;
+    border: 1px solid white;
+    border-radius: 50px 0 50px 0;
+    text-align: center;
+}
+
+.button:hover {
+    background-color: white;
+    color: orange;
+    cursor: pointer;
+}
+@media only screen and (max-width: 600px) {
+    /* Add styles for small screens */
+    body {
+        font-size: 14px;
+    }
+    /* ... other styles ... */
+}
+
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+    /* Add styles for medium screens */
+    body {
+        font-size: 16px;
+    }
+    /* ... other styles ... */
+}
+#expiryDateValue {
+    font-size: 0.8em; /* Adjust the font size for the date */
+}
+
+.net p {
+    margin: 0;
+}
+
+
+
+    </style>
+    <div class="container">
+        <div class="background">
+            <img src="https://www.acldigital.com/sites/default/files/2020-07/Blog_Banner_1366X560_HARNESSING%20THE%20POWER%20OF%205G.jpg" alt="">
+        </div>
+        <div class="box">
+            <div class="topbar">
+                <div style="text-align: center;">Connected Devices: <br>
+                <span>{{user.connectedDevices}}</span></div>
+                <div class="right">Network Device Name: <br> <Span>{{user.networkDevicesname}}</Span></div>
+                <div class="left"><span>{{naming}}</span></div>
+            </div>
+            <div class="div1">
+                <div>
+                    <p><i class="fa-solid fa-wallet" style="color: orange;"></i> Curent Balance: <span>{{user.currentBalance}}</span></p>
+                    <p><i class="fa-solid fa-coins" style="color: orange;"></i> Amount Due: <span>{{user.Amount}}</span></p>
+                </div>
+                <div>
+                    <p><i class="fa-solid fa-check fa-lg " style="color: #2fb90c;" ></i> Payment Status: <span>{{user.paymentStatus}}</span></p>
+                </div>
+                
+    
+            </div>
+            <div class="div2">
+                <p>Current Package</p>
+                <div class="net">
+                    <div>
+                        <p class="span"><span>{{user.networkSpeed}}</span></p>
+                        <p>Network Speed</p>
+                    </div>
+                     <div class="line"></div>
+<div>
+    <p class="span"><span id="remainingDays">{{user.RemainingDays}}</span> Days</p>
+    <p id="expiryDate">Expires on: <span id="expiryDateValue">{{user.subscriptionStartDate}}</span></p>
+</div>
+                </div>
+            </div>
+            <div class="div3">
+                <div>
+                    <p><i class="fa-solid fa-signal" style="color: #dcedf9;"></i> Signal Strength </p>
+                    <p class="dbm">{{user.signalStrength}}</p>
+                </div>
+            </div>
+     <div class="net">
+        <a href="https://wa.me/0772809396" target="_blank" rel="noopener noreferrer">Chat with us on WhatsApp</a>
+        
+        <a href="/"class="button">Log out</a>
+
+        </a>
+    </div>
+
+        </div>
+    </div>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        // Get elements
+        var remainingDaysElement = document.getElementById('remainingDays');
+        var expiryDateValueElement = document.getElementById('expiryDateValue');
+
+        // Sample subscription start date (replace this with actual data from the database)
+        var subscriptionStartDate = new Date("{{user.subscriptionStartDate}}");
+
+        // Fixed duration for subscription (e.g., 30 days)
+        var subscriptionDurationDays = 30;
+
+        // Calculate remaining days
+        var currentDate = new Date();
+        var subscriptionEndDate = new Date(subscriptionStartDate);
+        subscriptionEndDate.setDate(subscriptionEndDate.getDate() + subscriptionDurationDays);
+        var remainingDays = Math.max(0, Math.ceil((subscriptionEndDate - currentDate) / (1000 * 60 * 60 * 24)));
+
+        // Display remaining days
+        remainingDaysElement.textContent = remainingDays;
+
+        // Display expiry date
+        expiryDateValueElement.textContent = subscriptionEndDate.toDateString();
+
+        // Check if subscription has ended
+        if (currentDate > subscriptionEndDate) {
+            alert('Your subscription has ended. Please make a payment for reactivation.');
+        }
+    });
+</script>
 </body>
 </html>

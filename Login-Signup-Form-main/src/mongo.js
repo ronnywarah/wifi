@@ -17,26 +17,88 @@ const logInSchema = new mongoose.Schema({
         type: String,
         required: true
     },
-    connectionStatus: {
+    networkDevicesname: {
         type: String,
         required: true
     },
+    paymentStatus: {
+       type: String,
+       required: true
+    },
+    connectedDevices: {
+        type: String,
+        required: true
+    },
+    connectionStatus: {
+        type: String,
+        required: true 
+    },
+    networkSpeed: {
+        type: String,
+        required: true   
+    },
     signalStrength: {
-        type: Number,
+        type: String,
+        required: true
+    },
+    Amount: {
+        type: String,
+        required: true
+    },
+    currentBalance: {
+        type: String,
+        required: true
+    },
+    name: {
+        type: String,
+        required: true
+    },
+    password: {
+        type: String,
+        required: true
+    },
+    networkDevicesname: {
+        type: String,
+        required: true
+    },
+    paymentStatus: {
+        type: String,
+        required: true
+    },
+    connectedDevices: {
+        type: String,
+        required: true
+    },
+    connectionStatus: {
+        type: String,
         required: true
     },
     networkSpeed: {
         type: String,
         required: true
     },
-    connectedDevices: {
-        type: Number,
-        required: true
-    },
-    paymentStatus: {
+    signalStrength: {
         type: String,
         required: true
+    },
+    Amount: {
+        type: String,
+        required: true
+    },
+    currentBalance: {
+        type: String,
+        required: true
+    },
+    RemainingDays: {
+        type: String,
+        required: true
+    },
+    subscriptionStartDate: {
+        type: Date, // You might want to use Date type for subscription start date
+        required: true
     }
+    
+
 });
 
 const LogInCollection = new mongoose.model('LogInCollection', logInSchema);
