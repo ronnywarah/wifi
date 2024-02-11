@@ -2,7 +2,7 @@ const express = require("express");
 const path = require("path");
 const app = express();
 const LogInCollection = require("./mongo");
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 8080;
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
